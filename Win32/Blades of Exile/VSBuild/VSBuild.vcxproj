@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{398A5F98-E233-452E-B270-8ADDC863A65F}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeOutput>VSBuild.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <TargetName>Blades of Exile</TargetName>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeOutput>VSBuild.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <DataExecutionPrevention>false</DataExecutionPrevention>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AllowIsolation>false</AllowIsolation>
+      <EnableUAC>false</EnableUAC>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>false</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\boe.actions.cpp" />
+    <ClCompile Include="..\boe.combat.cpp" />
+    <ClCompile Include="..\boe.dlgutil.cpp" />
+    <ClCompile Include="..\boe.fields.cpp" />
+    <ClCompile Include="..\boe.fileio.cpp" />
+    <ClCompile Include="..\boe.graphics.cpp" />
+    <ClCompile Include="..\boe.graphutil.cpp" />
+    <ClCompile Include="..\boe.infodlg.cpp" />
+    <ClCompile Include="..\boe.itemdata.cpp" />
+    <ClCompile Include="..\boe.items.cpp" />
+    <ClCompile Include="..\boe.locutils.cpp" />
+    <ClCompile Include="..\boe.main.cpp" />
+    <ClCompile Include="..\boe.monster.cpp" />
+    <ClCompile Include="..\boe.newgraph.cpp" />
+    <ClCompile Include="..\boe.party.cpp" />
+    <ClCompile Include="..\boe.specials.cpp" />
+    <ClCompile Include="..\boe.text.cpp" />
+    <ClCompile Include="..\boe.town.cpp" />
+    <ClCompile Include="..\classes\item.cpp" />
+    <ClCompile Include="..\classes\location.cpp" />
+    <ClCompile Include="..\classes\pc.cpp" />
+    <ClCompile Include="..\global.cpp" />
+    <ClCompile Include="..\globvar.cpp" />
+    <ClCompile Include="..\tools\dlogtool.cpp" />
+    <ClCompile Include="..\tools\mathutil.cpp" />
+    <ClCompile Include="..\tools\soundtool.cpp" />
+    <ClCompile Include="..\tools\soundvars.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\boe.actions.h" />
+    <ClInclude Include="..\boe.combat.h" />
+    <ClInclude Include="..\boe.consts.h" />
+    <ClInclude Include="..\boe.dlgutil.h" />
+    <ClInclude Include="..\boe.fields.h" />
+    <ClInclude Include="..\boe.fileio.h" />
+    <ClInclude Include="..\boe.graphics.h" />
+    <ClInclude Include="..\boe.graphutil.h" />
+    <ClInclude Include="..\boe.infodlg.h" />
+    <ClInclude Include="..\boe.itemdata.h" />
+    <ClInclude Include="..\boe.items.h" />
+    <ClInclude Include="..\boe.locutils.h" />
+    <ClInclude Include="..\boe.main.h" />
+    <ClInclude Include="..\boe.monster.h" />
+    <ClInclude Include="..\boe.newgraph.h" />
+    <ClInclude Include="..\boe.party.h" />
+    <ClInclude Include="..\boe.specials.h" />
+    <ClInclude Include="..\boe.text.h" />
+    <ClInclude Include="..\boe.town.h" />
+    <ClInclude Include="..\classes\consts.h" />
+    <ClInclude Include="..\classes\item.h" />
+    <ClInclude Include="..\classes\location.h" />
+    <ClInclude Include="..\classes\pc.h" />
+    <ClInclude Include="..\global.h" />
+    <ClInclude Include="..\globvar.h" />
+    <ClInclude Include="..\tools\dlogtool.h" />
+    <ClInclude Include="..\tools\mathutil.h" />
+    <ClInclude Include="..\tools\soundtool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\BLADEXIL.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\boot.cur" />
+    <None Include="..\Resources\c.cur" />
+    <None Include="..\Resources\d.cur" />
+    <None Include="..\Resources\dl.cur" />
+    <None Include="..\Resources\dr.cur" />
+    <None Include="..\Resources\key.cur" />
+    <None Include="..\Resources\l.cur" />
+    <None Include="..\Resources\look.cur" />
+    <None Include="..\Resources\r.cur" />
+    <None Include="..\Resources\sword.cur" />
+    <None Include="..\Resources\talk.cur" />
+    <None Include="..\Resources\target.cur" />
+    <None Include="..\Resources\u.cur" />
+    <None Include="..\Resources\ul.cur" />
+    <None Include="..\Resources\ur.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\BLADES.RC" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
