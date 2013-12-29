@@ -1,32 +1,11 @@
 Classic Blades of Exile for MSVC++
 ==================================
 
-This is merely a fork of CBoE with MSVC++ 2013 specific fixes and changes in it.
+This is merely a fork of CBoE with MSVC++ 2013 specific fixes and changes in it.  You may be interested in this fork if you wish to play Blades of Exile on a Windows Vista, 7, 8 or 8.1 machine.
 
+The current binary build (manually performed) of this fork resides at: (http://cheeseontoast.info/cboe-msvc/)
 
-Original README.md
-------------------
-
-This project hosts the source code to the classic RPG creator Blades of Exile after it was released
-by [Spiderweb Software](http://www.spiderwebsoftware.com/) under GPLv2. It is a svn-git transfer from the
-[Google Code Project](http://code.google.com/p/openexile/); all issues and trunk code has been ported.
-
-The primary purpose of this project is to provide bug fixes to Blades of Exile
-so that it can compile and run on modern operating systems. The secondary purpose is
-to generalize and extend its functionality while maintaining backwards compatibility.
-
-If you would like to be added to this project contact [Sylae](https://github.com/sylae)
-or one of the other people on the owners list. This is an open project, with no strong prerequisites
-for getting commit access. With that in mind, please be careful of what you check into the repository.
-Please do not commit any binaries, junk files, or anything that doesn't compile.
-
-The current task at hand is to merge the Mac and Windows code into the unified wxWidgets code base.
-
-Linux
------
-
-At last, there is a potential Linux version available in the downloads (though so far only the
-Character Editor is available). This should be treated as an alpha/beta release, so use with caution. 
+Please check out the original repository for futher details: (https://github.com/calref/cboe)
 
 Helpful Links
 -------------
