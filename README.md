@@ -1,5 +1,11 @@
-Classic Blades of Exile
-=======================
+Classic Blades of Exile for MSVC++
+==================================
+
+This is merely a fork of CBoE with MSVC++ 2013 specific fixes and changes in it.
+
+
+Original README.md
+------------------
 
 This project hosts the source code to the classic RPG creator Blades of Exile after it was released
 by [Spiderweb Software](http://www.spiderwebsoftware.com/) under GPLv2. It is a svn-git transfer from the
