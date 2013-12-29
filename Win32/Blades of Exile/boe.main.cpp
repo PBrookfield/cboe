@@ -321,8 +321,8 @@ long CALLBACK WndProc (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 	short sbar_pos;
 	short which_sbar;
 	short old_setting;
-	short smin;
-	short smax;
+	int smin;
+	int smax;
 
 // First, handle window size
 	GetWindowRect(mainPtr,&wind_rect);
