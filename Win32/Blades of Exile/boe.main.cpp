@@ -1,4 +1,7 @@
 #include <windows.h>
+#ifdef _MSC_VER
+#include <winuser.h>
+#endif
 #include "global.h"
 #include "boe.graphics.h"
 #include "boe.newgraph.h"
@@ -265,6 +268,14 @@ int WINAPI WinMain(HINSTANCE hInstance,	HINSTANCE hPrevInstance, LPSTR, int	nCmd
 		reset_text_bar();
 
 		adjust_window_mode();
+		
+#ifdef _MSC_VER
+		// Hack for Vista+ Windows ghosting feature marking us as non-responsive 
+		// in long fight sequences and the intro because UI messages are being blocked
+		// Not willing to re-write the game to deal with this...
+		// MinGW doesn't extern this call out in most versions, so MSVC++ only for now.
+		DisableProcessWindowsGhosting();
+#endif
 
 		cd_init_dialogs();
 
