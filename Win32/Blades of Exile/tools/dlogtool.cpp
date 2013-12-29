@@ -722,8 +722,12 @@ BOOL CALLBACK dummy_dialog_proc (HWND hDlg, UINT message, WPARAM, LPARAM)
 								item_key[free_item] = 255;
 								break;
 							case 6:
-								edit_box = CreateWindow("edit",NULL,WS_CHILD | WS_BORDER | WS_VISIBLE,
-									item_rect[free_item].left,item_rect[free_item].top,
+#ifdef _MSC_VER
+								edit_box = CreateWindow("edit", NULL, WS_CHILD | WS_VISIBLE,
+#else
+								edit_box = CreateWindow("edit", NULL, WS_CHILD | WS_BORDER | WS_VISIBLE,
+#endif
+								    item_rect[free_item].left,item_rect[free_item].top,
 									item_rect[free_item].right - item_rect[free_item].left,
 									item_rect[free_item].bottom - item_rect[free_item].top,
 									dlgs[free_slot],(HMENU) 150,(HINSTANCE) store_hInstance,NULL);
