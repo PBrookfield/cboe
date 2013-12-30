@@ -551,6 +551,7 @@ BOOL CALLBACK dummy_dialog_proc (HWND hDlg, UINT message, WPARAM, LPARAM)
 	RECT dlg_rect;
 	short win_height = 0, win_width = 0;
 	short str_offset = 1;
+	int wind_style;
 
 	free_slot = store_free_slot;
 
@@ -722,11 +723,13 @@ BOOL CALLBACK dummy_dialog_proc (HWND hDlg, UINT message, WPARAM, LPARAM)
 								item_key[free_item] = 255;
 								break;
 							case 6:
+
 #ifdef _MSC_VER
-								edit_box = CreateWindow("edit", NULL, WS_CHILD | WS_VISIBLE,
+								wind_style = WS_CHILD | WS_VISIBLE;
 #else
-								edit_box = CreateWindow("edit", NULL, WS_CHILD | WS_BORDER | WS_VISIBLE,
+								wind_style = WS_CHILD | WS_BORDER | WS_VISIBLE;
 #endif
+								edit_box = CreateWindow("edit", NULL, wind_style,
 								    item_rect[free_item].left,item_rect[free_item].top,
 									item_rect[free_item].right - item_rect[free_item].left,
 									item_rect[free_item].bottom - item_rect[free_item].top,

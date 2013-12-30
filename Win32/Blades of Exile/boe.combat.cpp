@@ -144,21 +144,22 @@ void start_outdoor_combat(outdoor_creature_type encounter,unsigned char in_which
 
 Boolean pc_combat_move(location destination)
 {
-	short dir,monst_hit,s1,s2,i,monst_exist,switch_pc;
-	Boolean keep_going = true,forced = false,check_f;
-	location monst_loc,store_loc;
-	short spec_num;
+	short dir, monst_hit, s1, s2, i, monst_exist, switch_pc;
+	Boolean keep_going = true, forced = false, check_f = false;
+	location monst_loc, store_loc;
+	short spec_num = 0;
 
 	if (monst_there(destination) > T_M)
-		keep_going = check_special_terrain(destination,2,current_pc,&spec_num,&check_f);
+		keep_going = check_special_terrain(destination, 2, current_pc, &spec_num, &check_f);
+	
 	if (check_f == true)
 		forced = true;
 
-    if (in_scen_debug && ghost_mode)
-        forced = true;
+	if (in_scen_debug && ghost_mode)
+		forced = true;
 
 	if (spec_num == 50)
-	   forced = true;
+		forced = true;
 
 	if (keep_going == true) {
 
